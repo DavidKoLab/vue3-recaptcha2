@@ -97,7 +97,7 @@
                 scriptTag.id = scriptId;
                 scriptTag.onerror = loadingFailed("error");
                 scriptTag.onabort = loadingFailed("aborted");
-                scriptTag.setAttribute("src", `https://www.google.com/recaptcha/api.js?onload=recaptchaReady&render=explicit&hl=${props.hl}&_=${+new Date()}`);
+                scriptTag.setAttribute("src", `https://www.recaptcha.net/recaptcha/api.js?onload=recaptchaReady&render=explicit&hl=${props.hl}&_=${+new Date()}`);
                 doc.head.appendChild(scriptTag);
             }).then(() => {
                 renderRecaptcha();
